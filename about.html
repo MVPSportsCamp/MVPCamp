@@ -40,29 +40,33 @@
   .stat-card .num { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--gold); line-height: 1; }
   .stat-card .lbl { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-top: 0.25rem; }
 
-  .pricing { background: var(--dark); border-top: 1px solid rgba(245,168,0,0.2); border-bottom: 1px solid rgba(245,168,0,0.2); }
-  .pricing-inner { max-width: 720px; margin: 0 auto; text-align: center; }
-  .pricing-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
-  .price-card { border-radius: 8px; padding: 2.5rem 2rem; }
-  .price-card.blue { background: rgba(21,101,192,0.2); border: 2px solid var(--blue); }
-  .price-card.gold { background: rgba(245,168,0,0.12); border: 2px solid var(--gold); }
-  .price-badge { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 3px; display: inline-block; margin-bottom: 1rem; }
-  .price-card.blue .price-badge { background: var(--blue); color: var(--white); }
-  .price-card.gold .price-badge { background: var(--gold); color: var(--black); }
-  .price-session { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 0.5rem; }
-  .price-amount { font-family: 'Bebas Neue', sans-serif; font-size: 4.5rem; line-height: 1; }
-  .price-card.blue .price-amount { color: var(--blue-bright); }
-  .price-card.gold .price-amount { color: var(--gold); }
-  .price-perks { margin-top: 1.5rem; text-align: left; list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-  .price-perks li { font-size: 0.9rem; color: var(--gray); display: flex; align-items: center; gap: 0.5rem; }
-  .price-perks li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+  .founders { background: var(--dark); border-top: 1px solid rgba(245,168,0,0.2); }
+  .founders-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+  .founders-badge {
+    display: inline-block;
+    background: rgba(245,168,0,0.12);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 2rem 2.5rem;
+    margin-top: 2rem;
+  }
+  .founders-badge .big { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--gold); line-height: 1; }
+  .founders-badge .desc { font-size: 1rem; color: var(--gray); margin-top: 0.5rem; line-height: 1.6; }
+  .founders-badge .desc span { color: var(--white); font-weight: 700; }
 
-  .signup { background: var(--dark2); text-align: center; }
-  .signup-inner { max-width: 600px; margin: 0 auto; }
-  .email-box { display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(21,101,192,0.15); border: 2px solid var(--blue-light); border-radius: 8px; padding: 1rem 1.5rem; margin: 2rem 0; }
-  .email-icon { background: var(--blue); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
-  .email-link { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--blue-bright); text-decoration: none; }
-  .signup-note { font-size: 0.9rem; color: var(--gray); margin-bottom: 0.5rem; }
+  .mission { background: var(--dark2); border-top: 1px solid rgba(245,168,0,0.2); border-bottom: 1px solid rgba(245,168,0,0.2); }
+  .mission-inner { max-width: 760px; margin: 0 auto; }
+  .mission-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+  .mission-card { background: var(--dark); border: 1px solid rgba(255,255,255,0.08); border-left: 4px solid var(--gold); border-radius: 8px; padding: 1.5rem; }
+  .mission-card:nth-child(2) { border-left-color: var(--blue-light); }
+  .mission-card:nth-child(3) { border-left-color: var(--blue-bright); }
+  .mission-card .icon { font-size: 2rem; margin-bottom: 0.75rem; }
+  .mission-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--white); margin-bottom: 0.5rem; }
+  .mission-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
+
+  .cta-bar { background: var(--blue); padding: 3rem 1.5rem; text-align: center; }
+  .cta-bar h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); color: var(--white); margin-bottom: 1rem; }
+  .cta-bar p { color: rgba(255,255,255,0.8); margin-bottom: 2rem; font-size: 1.05rem; }
   .btn-primary { background: var(--gold); color: var(--black); font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.85rem 2.5rem; border: none; border-radius: 4px; text-decoration: none; display: inline-block; }
 
   .footer-stripe { background: var(--gold); padding: 1rem 2rem; display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; }
@@ -70,7 +74,11 @@
   footer { background: #050510; text-align: center; padding: 2rem 1.5rem; color: var(--gray); font-size: 0.85rem; }
   footer strong { color: var(--gold); }
 
-  @media (max-width: 640px) { nav ul { display: none; } .about-inner { grid-template-columns: 1fr; gap: 2rem; } .pricing-cards { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) {
+    nav ul { display: none; }
+    .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .mission-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -80,14 +88,14 @@
   <ul>
     <li><a href="about.html">About</a></li>
     <li><a href="sports.html">Sports</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#signup" class="nav-cta">Sign Up</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="signup.html" class="nav-cta">Sign Up</a></li>
   </ul>
 </nav>
 
 <div class="page-hero">
   <h1>About <span>MVP</span></h1>
-  <p>A fun & active sports experience for kids</p>
+  <p>Fun, active & built by kids for kids</p>
 </div>
 
 <section class="about">
@@ -115,49 +123,54 @@
   </div>
 </section>
 
-<section class="pricing" id="pricing">
-  <div class="pricing-inner">
-    <p class="section-label">Pricing</p>
-    <h2 class="section-title">Simple & Affordable</h2>
-    <p class="section-body" style="margin: 0 auto; max-width: 400px;">Pick the session length that works for your schedule. No membership, no hassle.</p>
-    <div class="pricing-cards">
-      <div class="price-card blue">
-        <span class="price-badge">Starter</span>
-        <p class="price-session">1 Hour Session</p>
-        <p class="price-amount">$10</p>
-        <ul class="price-perks">
-          <li>All 5 activities</li>
-          <li>Great for first-timers</li>
-          <li>Coaching included</li>
-        </ul>
-      </div>
-      <div class="price-card gold">
-        <span class="price-badge">Most Popular</span>
-        <p class="price-session">2 Hour Session</p>
-        <p class="price-amount">$15</p>
-        <ul class="price-perks">
-          <li>All 5 activities</li>
-          <li>More game time</li>
-          <li>Extra team games</li>
-        </ul>
+<section class="founders">
+  <div class="founders-inner">
+    <p class="section-label">The Story</p>
+    <h2 class="section-title">Started by Two 12-Year-Olds</h2>
+    <p class="section-body" style="margin: 0 auto; text-align: center;">
+      We're two 12-year-olds who love sports and wanted to share that with younger kids in our community.
+      We started MVP Sports Camp because we believe every kid deserves a fun, active summer — and we
+      wanted to make that happen ourselves.
+    </p>
+    <div class="founders-badge">
+      <div class="big">12 + 12</div>
+      <div class="desc">
+        <span>Two best friends. One big idea.</span><br>
+        We built this camp from scratch because we love sports and love helping younger kids learn to play.
       </div>
     </div>
   </div>
 </section>
 
-<section class="signup" id="signup">
-  <div class="signup-inner">
-    <p class="section-label">Ready to Play?</p>
-    <h2 class="section-title">Sign Up & Get Info</h2>
-    <p class="section-body" style="margin: 0 auto;">Send us an email to register your child or ask any questions. We'll get back to you fast!</p>
-    <div class="email-box">
-      <div class="email-icon">✉️</div>
-      <a href="mailto:elimenchel@gmail.com" class="email-link">elimenchel@gmail.com</a>
+<section class="mission">
+  <div class="mission-inner">
+    <p class="section-label">What We're About</p>
+    <h2 class="section-title">Our Mission</h2>
+    <div class="mission-grid">
+      <div class="mission-card">
+        <div class="icon">⭐</div>
+        <h3>Build Skills</h3>
+        <p>We teach real sports fundamentals in a way that's fun and easy for young kids to pick up.</p>
+      </div>
+      <div class="mission-card">
+        <div class="icon">🤝</div>
+        <h3>Make Friends</h3>
+        <p>Team games and group activities help kids connect and build friendships that last.</p>
+      </div>
+      <div class="mission-card">
+        <div class="icon">🏆</div>
+        <h3>Be Your Best</h3>
+        <p>We cheer every kid on and make sure they leave each session feeling proud of themselves.</p>
+      </div>
     </div>
-    <p class="signup-note">Email us to sign up and for more info about dates and locations.</p>
-    <a href="mailto:elimenchel@gmail.com" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Email Us Now</a>
   </div>
 </section>
+
+<div class="cta-bar">
+  <h2>Ready to Join the Fun?</h2>
+  <p>Email us to sign up or ask any questions about upcoming sessions.</p>
+  <a href="signup.html" class="btn-primary">Sign Up Now</a>
+</div>
 
 <div class="footer-stripe">
   <div class="stripe-item">⭐ Build Skills</div>
