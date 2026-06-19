@@ -7,395 +7,93 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700;900&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --gold: #F5A800;
-    --gold-light: #FFD060;
-    --blue: #1565C0;
-    --blue-light: #2196F3;
-    --blue-bright: #42A5F5;
-    --white: #FFFFFF;
-    --black: #0A0A0A;
-    --dark: #0D0D1A;
-    --dark2: #111128;
-    --gray: #B0B8CC;
+    --gold: #F5A800; --gold-light: #FFD060; --blue: #1565C0;
+    --blue-light: #2196F3; --blue-bright: #42A5F5;
+    --white: #FFFFFF; --black: #0A0A0A; --dark: #0D0D1A; --dark2: #111128; --gray: #B0B8CC;
   }
-
-  html {
-    scroll-behavior: smooth;
-    height: 100%;
-    overflow: visible !important;
-  }
-
-  body {
-    font-family: 'Barlow', sans-serif;
-    background: var(--dark);
-    color: var(--white);
-    overflow-x: hidden;
-    overflow-y: visible !important;
-    min-height: 100%;
-    width: 100%;
-  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Barlow', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; }
 
   nav {
-    background: rgba(10, 10, 26, 0.98);
+    background: rgba(10,10,26,0.98);
     border-bottom: 2px solid var(--gold);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; align-items: center; justify-content: space-between;
     padding: 0.75rem 2rem;
   }
-
-  .nav-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.8rem;
-    letter-spacing: 0.05em;
-    color: var(--white);
-  }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--white); text-decoration: none; }
   .nav-logo span { color: var(--gold); }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-  }
-  nav ul a {
-    text-decoration: none;
-    color: var(--gray);
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
+  nav ul { list-style: none; display: flex; gap: 2rem; }
+  nav ul a { text-decoration: none; color: var(--gray); font-weight: 600; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; }
   nav ul a:hover { color: var(--gold); }
-
-  .nav-cta {
-    background: var(--gold);
-    color: var(--black) !important;
-    padding: 0.45rem 1.2rem;
-    border-radius: 4px;
-    font-weight: 700 !important;
-  }
+  .nav-cta { background: var(--gold); color: var(--black) !important; padding: 0.45rem 1.2rem; border-radius: 4px; font-weight: 700 !important; }
 
   .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 5rem 1.5rem 4rem;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 5rem 1.5rem 4rem;
     background: radial-gradient(ellipse 80% 60% at 50% 30%, #0D2060 0%, var(--dark) 70%);
   }
-
-  .hero-eyebrow {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--blue-bright);
-    margin-bottom: 1rem;
-  }
-
-  .hero-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(5rem, 18vw, 12rem);
-    line-height: 0.9;
-    color: var(--white);
-  }
+  .hero-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--blue-bright); margin-bottom: 1rem; }
+  .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem, 18vw, 12rem); line-height: 0.9; color: var(--white); }
   .hero-title .v { color: var(--gold); }
-
-  .hero-subtitle {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(2rem, 6vw, 4rem);
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--white);
-  }
-
-  .hero-tagline {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-top: 0.75rem;
-  }
-
-  .hero-balls {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin: 2rem 0;
-    font-size: clamp(3rem, 8vw, 5rem);
-  }
-
-  .hero-desc {
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--white);
-    margin-bottom: 2rem;
-  }
+  .hero-subtitle { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2rem, 6vw, 4rem); font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); }
+  .hero-tagline { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1rem, 3vw, 1.5rem); font-weight: 700; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-top: 0.75rem; }
+  .hero-balls { display: flex; gap: 1.5rem; justify-content: center; margin: 2rem 0; font-size: clamp(3rem, 8vw, 5rem); }
+  .hero-desc { font-size: 1.1rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--white); margin-bottom: 2rem; }
   .hero-desc span { color: var(--gold); }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
 
-  .hero-btns {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .btn-primary {
-    background: var(--gold);
-    color: var(--black);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.85rem 2.5rem;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  .btn-secondary {
-    background: transparent;
-    color: var(--white);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.85rem 2.5rem;
-    border: 2px solid rgba(255,255,255,0.3);
-    border-radius: 4px;
-    text-decoration: none;
-    display: inline-block;
-  }
+  .btn-primary { background: var(--gold); color: var(--black); font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.85rem 2.5rem; border: none; border-radius: 4px; text-decoration: none; display: inline-block; }
+  .btn-secondary { background: transparent; color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.85rem 2.5rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 4px; text-decoration: none; display: inline-block; }
 
   section { padding: 5rem 1.5rem; }
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1; color: var(--white); margin-bottom: 1rem; }
+  .section-body { font-size: 1.05rem; color: var(--gray); line-height: 1.7; max-width: 540px; }
 
-  .section-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 0.75rem;
-  }
-
-  .section-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    line-height: 1;
-    color: var(--white);
-    margin-bottom: 1rem;
-  }
-
-  .section-body {
-    font-size: 1.05rem;
-    color: var(--gray);
-    line-height: 1.7;
-    max-width: 540px;
-  }
-
-  .about {
-    background: var(--dark2);
-    border-top: 1px solid rgba(245,168,0,0.2);
-    border-bottom: 1px solid rgba(245,168,0,0.2);
-  }
-
-  .about-inner {
-    max-width: 960px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-
-  .about-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .stat-card {
-    background: rgba(21,101,192,0.15);
-    border: 1px solid rgba(21,101,192,0.3);
-    border-radius: 6px;
-    padding: 1.25rem;
-    text-align: center;
-  }
-  .stat-card .num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.8rem;
-    color: var(--gold);
-    line-height: 1;
-  }
-  .stat-card .lbl {
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gray);
-    margin-top: 0.25rem;
-  }
+  .about { background: var(--dark2); border-top: 1px solid rgba(245,168,0,0.2); border-bottom: 1px solid rgba(245,168,0,0.2); }
+  .about-inner { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stat-card { background: rgba(21,101,192,0.15); border: 1px solid rgba(21,101,192,0.3); border-radius: 6px; padding: 1.25rem; text-align: center; }
+  .stat-card .num { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--gold); line-height: 1; }
+  .stat-card .lbl { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-top: 0.25rem; }
 
   .sports { background: var(--dark); }
   .sports-inner { max-width: 1000px; margin: 0 auto; text-align: center; }
-
-  .sports-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1rem;
-    margin-top: 3rem;
-  }
-
-  .sport-card {
-    background: var(--dark2);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 8px;
-    padding: 2rem 1rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
+  .sports-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 3rem; }
+  .sport-card { background: var(--dark2); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 2rem 1rem 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+  .sport-card:hover { border-color: var(--gold); transform: translateY(-4px); transition: border-color 0.2s, transform 0.2s; }
   .sport-icon { font-size: 2.8rem; line-height: 1; }
+  .sport-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); }
+  .sport-desc { font-size: 0.8rem; color: var(--gray); line-height: 1.5; text-align: center; }
 
-  .sport-name {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--white);
-  }
-
-  .sport-desc { font-size: 0.8rem; color: var(--gray); line-height: 1.5; }
-
-  .pricing {
-    background: var(--dark2);
-    border-top: 1px solid rgba(245,168,0,0.2);
-    border-bottom: 1px solid rgba(245,168,0,0.2);
-  }
+  .pricing { background: var(--dark2); border-top: 1px solid rgba(245,168,0,0.2); border-bottom: 1px solid rgba(245,168,0,0.2); }
   .pricing-inner { max-width: 720px; margin: 0 auto; text-align: center; }
-
-  .pricing-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-
+  .pricing-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
   .price-card { border-radius: 8px; padding: 2.5rem 2rem; }
   .price-card.blue { background: rgba(21,101,192,0.2); border: 2px solid var(--blue); }
   .price-card.gold { background: rgba(245,168,0,0.12); border: 2px solid var(--gold); }
-
-  .price-badge {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 0.3rem 0.9rem;
-    border-radius: 3px;
-    display: inline-block;
-    margin-bottom: 1rem;
-  }
+  .price-badge { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 3px; display: inline-block; margin-bottom: 1rem; }
   .price-card.blue .price-badge { background: var(--blue); color: var(--white); }
   .price-card.gold .price-badge { background: var(--gold); color: var(--black); }
-
-  .price-session {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gray);
-    margin-bottom: 0.5rem;
-  }
-
+  .price-session { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 0.5rem; }
   .price-amount { font-family: 'Bebas Neue', sans-serif; font-size: 4.5rem; line-height: 1; }
   .price-card.blue .price-amount { color: var(--blue-bright); }
   .price-card.gold .price-amount { color: var(--gold); }
-
-  .price-perks {
-    margin-top: 1.5rem;
-    text-align: left;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+  .price-perks { margin-top: 1.5rem; text-align: left; list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
   .price-perks li { font-size: 0.9rem; color: var(--gray); display: flex; align-items: center; gap: 0.5rem; }
   .price-perks li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
 
   .signup { background: var(--dark); text-align: center; }
   .signup-inner { max-width: 600px; margin: 0 auto; }
-
-  .email-box {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: rgba(21,101,192,0.15);
-    border: 2px solid var(--blue-light);
-    border-radius: 8px;
-    padding: 1rem 1.5rem;
-    margin: 2rem 0;
-  }
-  .email-icon {
-    background: var(--blue);
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.2rem;
-    flex-shrink: 0;
-  }
-  .email-link {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--blue-bright);
-    text-decoration: none;
-  }
-
+  .email-box { display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(21,101,192,0.15); border: 2px solid var(--blue-light); border-radius: 8px; padding: 1rem 1.5rem; margin: 2rem 0; }
+  .email-icon { background: var(--blue); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+  .email-link { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--blue-bright); text-decoration: none; }
   .signup-note { font-size: 0.9rem; color: var(--gray); margin-bottom: 0.5rem; }
 
-  .footer-stripe {
-    background: var(--gold);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  .stripe-item {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--black);
-  }
-
-  footer {
-    background: #050510;
-    text-align: center;
-    padding: 2rem 1.5rem;
-    color: var(--gray);
-    font-size: 0.85rem;
-  }
+  .footer-stripe { background: var(--gold); padding: 1rem 2rem; display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; }
+  .stripe-item { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--black); }
+  footer { background: #050510; text-align: center; padding: 2rem 1.5rem; color: var(--gray); font-size: 0.85rem; }
   footer strong { color: var(--gold); }
 
   @media (max-width: 640px) {
@@ -408,10 +106,10 @@
 <body>
 
 <nav>
-  <div class="nav-logo">M<span>V</span>P Sports Camp</div>
+  <a href="index.html" class="nav-logo">M<span>V</span>P Sports Camp</a>
   <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#sports">Sports</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sports.html">Sports</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#signup" class="nav-cta">Sign Up</a></li>
   </ul>
@@ -426,7 +124,7 @@
   <p class="hero-desc">Have fun. Get better. <span>Make memories.</span></p>
   <div class="hero-btns">
     <a href="#signup" class="btn-primary">Sign Up Now</a>
-    <a href="#sports" class="btn-secondary">What We Play</a>
+    <a href="sports.html" class="btn-secondary">What We Play</a>
   </div>
 </div>
 
@@ -464,7 +162,7 @@
       <div class="sport-card"><div class="sport-icon">🏏</div><div class="sport-name">Wiffle Ball</div><div class="sport-desc">Batting, fielding, and big league fun for all skill levels</div></div>
       <div class="sport-card"><div class="sport-icon">🏈</div><div class="sport-name">Football</div><div class="sport-desc">Throwing, catching, and flag-style games</div></div>
       <div class="sport-card"><div class="sport-icon">🏃</div><div class="sport-name">Relay Races</div><div class="sport-desc">Speed, teamwork, and friendly competition</div></div>
-      <div class="sport-card"><div class="sport-icon">🎮</div><div class="sport-name">Games & More!</div><div class="sport-desc">Bonus activities, team challenges, and surprises</div></div>
+      <div class="sport-card"><div class="sport-icon">🏅</div><div class="sport-name">Games & More!</div><div class="sport-desc">Bonus activities, team challenges, and more surprises</div></div>
     </div>
   </div>
 </section>
@@ -473,9 +171,7 @@
   <div class="pricing-inner">
     <p class="section-label">Pricing</p>
     <h2 class="section-title">Simple & Affordable</h2>
-    <p class="section-body" style="margin: 0 auto; max-width: 400px;">
-      Pick the session length that works for your schedule. No membership, no hassle.
-    </p>
+    <p class="section-body" style="margin: 0 auto; max-width: 400px;">Pick the session length that works for your schedule. No membership, no hassle.</p>
     <div class="pricing-cards">
       <div class="price-card blue">
         <span class="price-badge">Starter</span>
@@ -505,10 +201,7 @@
   <div class="signup-inner">
     <p class="section-label">Ready to Play?</p>
     <h2 class="section-title">Sign Up & Get Info</h2>
-    <p class="section-body" style="margin: 0 auto;">
-      Send us an email to register your child or ask any questions about upcoming sessions.
-      We'll get back to you fast!
-    </p>
+    <p class="section-body" style="margin: 0 auto;">Send us an email to register your child or ask any questions about upcoming sessions. We'll get back to you fast!</p>
     <div class="email-box">
       <div class="email-icon">✉️</div>
       <a href="mailto:elimenchel@gmail.com" class="email-link">elimenchel@gmail.com</a>
@@ -523,10 +216,9 @@
   <div class="stripe-item">🏆 Make Friends</div>
   <div class="stripe-item">⚡ Be Your Best</div>
 </div>
-
 <footer>
   <p>© 2025 <strong>MVP Sports Camp</strong> · Play. Learn. Win.</p>
-  <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">For kids ages 4–8 · Questions? Email elimenchel@gmail.com</p>
+  <p style="margin-top:0.5rem;font-size:0.8rem;opacity:0.6;">For kids ages 4–8 · Questions? Email elimenchel@gmail.com</p>
 </footer>
 
 </body>
