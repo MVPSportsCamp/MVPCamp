@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports – MVP Sports Camp</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700;900&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #F5A800; --gold-light: #FFD060; --blue: #1565C0;
+    --blue-light: #2196F3; --blue-bright: #42A5F5;
+    --white: #FFFFFF; --black: #0A0A0A; --dark: #0D0D1A; --dark2: #111128; --gray: #B0B8CC;
+  }
+  body { font-family: 'Barlow', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; }
+
+  nav { background: rgba(10,10,26,0.98); border-bottom: 2px solid var(--gold); display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 2rem; }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--white); text-decoration: none; }
+  .nav-logo span { color: var(--gold); }
+  nav ul { list-style: none; display: flex; gap: 2rem; }
+  nav ul a { text-decoration: none; color: var(--gray); font-weight: 600; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  nav ul a:hover { color: var(--gold); }
+  .nav-cta { background: var(--gold); color: var(--black) !important; padding: 0.45rem 1.2rem; border-radius: 4px; font-weight: 700 !important; }
+
+  .page-hero { background: radial-gradient(ellipse 80% 60% at 50% 30%, #0D2060 0%, var(--dark) 70%); padding: 5rem 1.5rem 3rem; text-align: center; }
+  .page-hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 8vw, 6rem); color: var(--white); }
+  .page-hero h1 span { color: var(--gold); }
+  .page-hero p { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue-bright); margin-top: 0.5rem; }
+
+  .sports-section { padding: 5rem 1.5rem; background: var(--dark2); }
+  .sports-inner { max-width: 900px; margin: 0 auto; }
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; text-align: center; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1; color: var(--white); margin-bottom: 3rem; text-align: center; }
+
+  .sport-list { display: flex; flex-direction: column; gap: 1.5rem; }
+  .sport-row {
+    background: var(--dark);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .sport-row:nth-child(even) { border-left-color: var(--blue-light); }
+  .sport-emoji { font-size: 3.5rem; flex-shrink: 0; }
+  .sport-info h3 { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--white); letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+  .sport-info p { font-size: 1rem; color: var(--gray); line-height: 1.6; }
+
+  .btn-primary { background: var(--gold); color: var(--black); font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.85rem 2.5rem; border: none; border-radius: 4px; text-decoration: none; display: inline-block; }
+
+  .cta-bar { background: var(--blue); padding: 3rem 1.5rem; text-align: center; }
+  .cta-bar h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); color: var(--white); margin-bottom: 1rem; }
+  .cta-bar p { color: rgba(255,255,255,0.8); margin-bottom: 2rem; font-size: 1.05rem; }
+
+  .footer-stripe { background: var(--gold); padding: 1rem 2rem; display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; }
+  .stripe-item { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--black); }
+  footer { background: #050510; text-align: center; padding: 2rem 1.5rem; color: var(--gray); font-size: 0.85rem; }
+  footer strong { color: var(--gold); }
+
+  @media (max-width: 640px) { nav ul { display: none; } .sport-row { flex-direction: column; text-align: center; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">M<span>V</span>P Sports Camp</a>
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sports.html">Sports</a></li>
+    <li><a href="about.html#pricing">Pricing</a></li>
+    <li><a href="about.html#signup" class="nav-cta">Sign Up</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <h1>What We <span>Play</span></h1>
+  <p>5 activities · all skill levels welcome</p>
+</div>
+
+<section class="sports-section">
+  <div class="sports-inner">
+    <p class="section-label">The Activities</p>
+    <h2 class="section-title">5 Activities, Endless Fun</h2>
+    <div class="sport-list">
+      <div class="sport-row">
+        <div class="sport-emoji">⚽</div>
+        <div class="sport-info">
+          <h3>Soccer</h3>
+          <p>Dribbling, passing, and friendly small-sided games. Kids learn ball control and teamwork while running around and having a blast.</p>
+        </div>
+      </div>
+      <div class="sport-row">
+        <div class="sport-emoji">🏏</div>
+        <div class="sport-info">
+          <h3>Wiffle Ball</h3>
+          <p>Batting, fielding, and big league fun for all skill levels. No experience needed — we teach the basics and keep it competitive and fun.</p>
+        </div>
+      </div>
+      <div class="sport-row">
+        <div class="sport-emoji">🏈</div>
+        <div class="sport-info">
+          <h3>Football</h3>
+          <p>Throwing, catching, and flag-style games. Kids practice routes, hand-offs, and team plays in a safe and supportive environment.</p>
+        </div>
+      </div>
+      <div class="sport-row">
+        <div class="sport-emoji">🏃</div>
+        <div class="sport-info">
+          <h3>Relay Races</h3>
+          <p>Speed, teamwork, and friendly competition. These high-energy races get everyone moving and cheering each other on.</p>
+        </div>
+      </div>
+      <div class="sport-row">
+        <div class="sport-emoji">🏅</div>
+        <div class="sport-info">
+          <h3>Games & More!</h3>
+          <p>Bonus team challenges, classic playground games, and surprise activities. Every session ends on a high note with something extra fun.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-bar">
+  <h2>Ready to Join the Fun?</h2>
+  <p>Email us to sign up or ask any questions about upcoming sessions.</p>
+  <a href="mailto:elimenchel@gmail.com" class="btn-primary">Sign Up Now</a>
+</div>
+
+<div class="footer-stripe">
+  <div class="stripe-item">⭐ Build Skills</div>
+  <div class="stripe-item">🏆 Make Friends</div>
+  <div class="stripe-item">⚡ Be Your Best</div>
+</div>
+<footer>
+  <p>© 2025 <strong>MVP Sports Camp</strong> · Play. Learn. Win.</p>
+  <p style="margin-top:0.5rem;font-size:0.8rem;opacity:0.6;">For kids ages 4–8 · Questions? Email elimenchel@gmail.com</p>
+</footer>
+
+</body>
+</html>
